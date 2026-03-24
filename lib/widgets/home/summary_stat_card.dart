@@ -21,35 +21,29 @@ class SummaryStatCard extends StatelessWidget {
   });
 
   // Named constructors for common card variants
-  const SummaryStatCard.todayOrders({
-    super.key,
-    required String value,
-  })  : label = 'Pesanan Hari Ini',
-        value = value,
-        backgroundColor = AppColors.surfaceContainerLow,
-        labelColor = AppColors.onSurfaceVariant,
-        valueColor = AppColors.primary,
-        isLarge = true;
+  const SummaryStatCard.todayOrders({super.key, required String value})
+    : label = 'Pesanan Hari Ini',
+      value = value,
+      backgroundColor = AppColors.primaryContainer,
+      labelColor = AppColors.onPrimaryContainer,
+      valueColor = AppColors.onPrimaryContainer,
+      isLarge = true;
 
-  const SummaryStatCard.lateOrders({
-    super.key,
-    required String value,
-  })  : label = 'Terlambat',
-        value = value,
-        backgroundColor = AppColors.errorContainer,
-        labelColor = AppColors.onErrorContainer,
-        valueColor = AppColors.error,
-        isLarge = false;
+  const SummaryStatCard.lateOrders({super.key, required String value})
+    : label = 'Terlambat',
+      value = value,
+      backgroundColor = AppColors.errorContainer,
+      labelColor = AppColors.onErrorContainer,
+      valueColor = AppColors.error,
+      isLarge = false;
 
-  const SummaryStatCard.completedOrders({
-    super.key,
-    required String value,
-  })  : label = 'Selesai',
-        value = value,
-        backgroundColor = AppColors.secondaryContainer,
-        labelColor = AppColors.onSecondaryContainer,
-        valueColor = AppColors.onSecondaryContainer,
-        isLarge = false;
+  const SummaryStatCard.completedOrders({super.key, required String value})
+    : label = 'Selesai',
+      value = value,
+      backgroundColor = AppColors.secondaryContainer,
+      labelColor = AppColors.onSecondaryContainer,
+      valueColor = AppColors.onSecondaryContainer,
+      isLarge = false;
 
   @override
   Widget build(BuildContext context) {
